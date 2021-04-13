@@ -1,37 +1,21 @@
-import { html, css, LitElement } from 'lit-element';
+import { html, LitElement } from 'lit-element';
+
+import {LitGrassDebitCardStyle} from './LitGlassDebitCardStyle.js';
 
 export class LitGlassDebitCard extends LitElement {
-  static get styles() {
-    return css`
-      :host {
-        display: block;
-        padding: 25px;
-        color: var(--lit-glass-debit-card-text-color, #000);
-      }
-    `;
-  }
 
-  static get properties() {
-    return {
-      title: { type: String },
-      counter: { type: Number },
-    };
+  static get styles() {
+    return [LitGrassDebitCardStyle];
   }
 
   constructor() {
     super();
-    this.title = 'Hey there';
-    this.counter = 5;
-  }
-
-  __increment() {
-    this.counter += 1;
   }
 
   render() {
     return html`
-      <h2>${this.title} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
+      <button>HOla</button>
+      <h1>HOla</h1>
     `;
   }
 }
